@@ -1,14 +1,10 @@
 {% extends 'base.html.twig' %}
 
-{% block meeta %}
-    <meta name="base_url" content="http://www.fgtechs.fr/z-pedro/wwwluxuryservices">
-    <meta name="csrf-token" content="9Tnm0YBCxgVTxoqI1HzccsU5NuE9RughZmhpzgXn">
-    <!--  favicon -->
-    <link rel="shortcut icon" href="{{asset("assets/img/ico/fav.png")}}">
-    
-{% endblock %}
+{% block title %}Hello JobsController!{% endblock %}
 
 {% block body %}
+
+
 <div class="base">
 
     <!-- Page -->
@@ -46,37 +42,7 @@
                         <li class=" waves-effect waves-light" data-group="fashion">Fashion & luxury</li>
                         <li class=" waves-effect waves-light" data-group="management">Management & HR</li>
                     </ul>
-                    <div class="portfolio portfolio-with-title col-2 gutter mt-30">
-
-                        <div class="portfolio-item" data-groups='["all", "commercial"]'>
-                            <div class="portfolio-wrapper">
-                                <div class="card job-card">
-                                    <div class="card-content">
-                                        <span class="title">
-                                            <span class="card-title">2nd assistant position</span>
-                                            <span class="ref grey-text">Ref. 1062</span>
-                                        </span>
-                                        <div class="metas mb-20">
-                                            <div class="meta">
-                                                <i class="material-icons">&#xE53E;</i>45k&euro;
-                                            </div>
-                                            <div class="meta">
-                                                <i class="material-icons">&#xE916;</i>2018-10-01
-                                            </div>
-                                            <div class="meta">
-                                                <i class="material-icons">&#xE55F;</i>Paris
-                                            </div>
-                                        </div>
-                                        <p class="truncate-text">Nulla interdum, erat et mollis eleifend, urna turpis pellentesque dolor, sed rhoncus erat est sit amet diam. Aliquam dignissim ipsum nec lorem pulvinar.</p>
-                                    </div>
-                                    <div class="card-action">
-                                        <a class="btn btn-md primary border waves-effect waves-dark" href="/jobs/show.html">Details</a>
-                                        <a class="btn btn-md primary waves-effect waves-light" href="#!">Apply</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="portfolio-item" data-groups='["all", "commercial"]'>
+                    <div class="portfolio portfolio-with-title col-2 gutter mt-30">                        <div class="portfolio-item" data-groups='["all", "commercial"]'>
                             <div class="portfolio-wrapper">
                                 <div class="card job-card">
                                     <div class="card-content">
@@ -196,15 +162,5 @@
 
 </div>
 
-
-{% endblock %}
-
-{% block javascriptsBottom %}
-<script type="text/javascript">
-
-    onAppReady(function() {
-        $('.preload').remove();
-    });
-</script>
 
 {% endblock %}

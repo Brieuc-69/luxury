@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
+  <!-- <![endif] -->
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-
+    <title>Luxury Services recruitment & services</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta name="author" content="idmkr.io" />
 
-    <title>Luxury Services recruitment & services!</title>
-
-    {% block stylesheets %}
-
+    {% block stylesheetsAndMeta %}
     {% endblock %}
 
     <script>
@@ -31,13 +29,7 @@
       }
     </script>
 
-    {% block javascripts %}
-      {% block importmap %}
-        {{ importmap('app') }}
-      {% endblock %}
-    {% endblock %}
-
-    <link href="/assets/css/main.css" rel="stylesheet" />
+    <link href="{{ asset('assets/css/main.css') }}" rel="stylesheet" />
 
     <link href="https://assets-luxury.projets.garage404.com/css/materialize.css" rel="stylesheet" />
     <link href="https://assets-luxury.projets.garage404.com/css/bootstrap.css" rel="stylesheet" />
@@ -86,7 +78,7 @@
       <div class="header-sticky semi-transparent">
         <div class="container">
           <div id="materialize-menu" class="menuzord">
-            <a class="brand logo-brand" href="/"></a>
+            <a class="brand logo-brand" href="{{ path('app_home') }}"></a>
             <div id="mobile-menu">
               <div class="nav-wrapper" id="toggle">
                 <span class="top"></span>
@@ -94,64 +86,63 @@
                 <span class="bottom"></span>
               </div>
               <div class="icon-wrapper">
-                <span class="account"><a href="/templates/auth/profile.html"><i class="material-icons">&#xE7FD;</i></a></span>
+                <span class="account"><a href="#"><i class="material-icons">&#xE7FD;</i></a></span>
               </div>
               <div class="nav-overlay" id="overlay">
                 <nav class="overlay-menu">
                   <ul>
                     <li>
-                      <a href="/">Home</a>
+                      <a href="{{path('app_home')}}">Home</a>
                     </li>
                     <li>
-                      <a href="/templates/jobs/index.html">Jobs Offers</a>
+                     <a href="{{path('app_job')}}">Jobs Offers</a>
                     </li>
                     <li>
-                      <a href="/templates/compagny.html">About Us</a>
+                      <a href="{{path('app_about')}}">About Us</a>
                     </li>
                     <li>
-                      <a href="/templates/contact.html">Contact</a>
-                    </li>
-                    <li>-</li>
-                    <li>
-                      <a href="/templates/auth/profile.html">Profile</a>
+                      <a href="{{path('app_contact')}}">Contact</a>
                     </li>
                     <li>
-                      <a href="/logout.html">Logout</a>
+                      <a href="{{path('app_profile')}}">Profile</a>
+                    </li>
+                    <li>
+                      <a href="{{path('app_logout')}}">Logout</a>
                     </li>
                   </ul>
                 </nav>
               </div>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-              <ul class="menuzord-menu pull-right light" role="navigation">
+           <ul class="menuzord-menu pull-right light" role="navigation">
                 <li class="dropdown">
-                  <a target="_self" href="/templates/auth/login.html"><span>Login</span></a>
+                  <a target="_self" href="{{ path('app_login') }}"><span>Login</span></a>
                 </li>
                 <li class="dropdown">
-                  <a target="_self" href="/templates/auth/register.html" class="btn bn-lg gradient secondary btn-block waves-effect waves-light btn-register"><span>Sign Up</span></a>
+                  <a target="_self" href="{{ path('app_register') }}" class="btn bn-lg gradient secondary btn-block waves-effect waves-light btn-register"><span>Sign Up</span></a>
                 </li>
               </ul>
               <ul class="menuzord-menu pull-right light" role="navigation">
                 <li class="active dropdown">
-                  <a target="_self" href="/">
+                  <a target="_self" href="{{path('app_home')}}">
                     <i class=""></i>
                     <span>Home</span>
                   </a>
                 </li>
                 <li class="dropdown">
-                  <a target="_self" href="/templates/jobs/index.html">
-                    <i class=""></i>
+                  <a target="_self" href=""{{path('app_job')}}"">
+                    <i class></i>
                     <span>Jobs offers</span>
                   </a>
                 </li>
                 <li class="dropdown">
-                  <a target="_self" href="/templates/compagny.html">
+                  <a target="_self" href="{{path('app_about')}}">
                     <i class=""></i>
                     <span>About us</span>
                   </a>
                 </li>
                 <li class="dropdown">
-                  <a target="_self" href="/templates/contact.html">
+                  <a target="_self" href="{{path('app_contact')}}">
                     <i class=""></i>
                     <span>Contact</span>
                   </a>
@@ -162,14 +153,15 @@
         </div>
       </div>
     </header>
-    {% block body %}
 
+    {% block body %}
     {% endblock %}
 
+    <!-- Footer -->
     <footer class="footer footer-four">
       <div class="primary-footer brand-bg text-center">
         <div class="container">
-          <a href="#top" class="page-scroll btn-floating btn-large gradient secondary back-top waves-effect waves-light" data-section="#top"><i class="material-icons">&#xE316;</i></a>
+          <a href= class="page-scroll btn-floating btn-large gradient secondary back-top waves-effect waves-light" data-section="#top"><i class="material-icons">&#xE316;</i></a>
 
           <ul class="social-link tt-animate ltr mt-20">
             <li>
@@ -186,7 +178,12 @@
             <div class="col-md-12">
               <div class="brand footer-brand"></div>
 
-              <span class="copy-text">© 2019 All right reserved - by <a href="https://idmkr.io/" target="_blank">IDMKR</a> - <a href="#!">Terms of use</a></span>
+              <span class="copy-text">
+                © 2019 All right reserved - by
+                <a href="https://idmkr.io/" target="_blank">IDMKR</a>
+                -
+                <a href="#!">Terms of use</a>
+              </span>
               <div class="footer-intro">
                 <p>Luxury Services is a leading professional recruitment consultancy specialising in the recruitment of permanent, contract and temporary positions on behalf of the world’s top employers.</p>
               </div>
@@ -203,16 +200,16 @@
         <div class="container">
           <ul class="" role="navigation">
             <li class="active dropdown">
-              <a target="_self" href="/"><span>Home</span></a>
+              <a target="_self" href="{{path('app_home')}}" ><span>Home</span></a>
             </li>
             <li class="dropdown">
-              <a target="_self" href="/template/jobs/jobs.html"><span>Jobs offers</span></a>
+              <a target="_self" href="{{path('app_job')}}"><span>Jobs offers</span></a>
             </li>
             <li class="dropdown">
-              <a target="_self" href="/templates/compagny.html"><span>About us</span></a>
+              <a target="_self" href="{{path('app_about')}}"><span>About us</span></a>
             </li>
             <li class="dropdown">
-              <a target="_self" href="/templates/contact.html"><span>Contact</span></a>
+              <a target="_self" href="{{path('app_contact')}}"><span>Contact</span></a>
             </li>
           </ul>
         </div>
@@ -221,8 +218,66 @@
       <!-- /.secondary-footer -->
     </footer>
 
-    {% block javascriptEnBas %}
+    <!-- RS5.0 Init -->
+    <script type="text/javascript">
+      document.querySelector('.rev_slider_wrapper').setAttribute('style', "background:url('assets/img" + (isMobile ? '/bg1.jpg' : '/bg3.jpg') + "');" + 'background-size:cover;' + 'background-position: center center;' + 'height:' + window.innerHeight + 'px')
+      
+      onAppReady(function () {
+        $('.preload').remove()
+        $('.materialize-slider').revolution({
+          sliderType: 'standard',
+          sliderLayout: 'fullscreen',
+          delay: 20000,
+          navigation: {
+            keyboardNavigation: 'on',
+            keyboard_direction: 'horizontal',
+            mouseScrollNavigation: 'off',
+            onHoverStop: 'off',
+            touch: {
+              touchenabled: 'on',
+              swipe_threshold: 75,
+              swipe_min_touches: 1,
+              swipe_direction: 'horizontal',
+              drag_block_vertical: false
+            },
+            arrows: {
+              style: 'gyges',
+              enable: true,
+              hide_onmobile: false,
+              hide_onleave: true,
+              tmp: '',
+              left: {
+                h_align: 'left',
+                v_align: 'center',
+                h_offset: 10,
+                v_offset: 0
+              },
+              right: {
+                h_align: 'right',
+                v_align: 'center',
+                h_offset: 10,
+                v_offset: 0
+              }
+            }
+          },
+          responsiveLevels: [1240, 1024, 778, 480],
+          gridwidth: [1240, 1024, 778, 480],
+          gridheight: [700, 600, 500, 500],
+          disableProgressBar: 'on',
+          parallax: {
+            type: 'mouse',
+            origo: 'slidercenter',
+            speed: 2000,
+            levels: [2, 3, 4, 5, 6, 7, 12, 16, 10, 50]
+          }
+        })
+      })
+    </script>
 
+    {% block javascripts %}
+      {% block importmap %}
+        {{ importmap('app') }}
+      {% endblock %}
     {% endblock %}
   </body>
 </html>

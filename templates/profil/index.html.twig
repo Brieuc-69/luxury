@@ -1,22 +1,8 @@
 {% extends 'base.html.twig' %}
 
-    {% block meta %}
-        <meta name="base_url" content="https://assets-luxury.projets.garage404.com">
-        <meta name="csrf-token" content="utSEZUUxgneXBCQY5My9Djz8rVhqLiG7PLq3ThDA">
-        <!--  favicon -->
-        <link rel="shortcut icon" href="{{ asset('assets/img/luxury-services-logo.png')}}">
-    {% endblock %}
 
-    {% block stylesheets %}
-        <style>
-            select {
-                display: block!important;
-            }
-        </style>
 
-        {% endblock %}
 {% block body %}
-
 <div class="base">
 
     <!-- Page -->
@@ -45,7 +31,7 @@
                 <div class="row">
                     <div class="score-container">
                         <h4>
-                            <img src="https://i.gifer.com/p5.gif" style="height: 80px; width: 201px;"> &nbsp;
+                            <img src="https://i.imgur.com/s9bPVaK.gif" style="height: 80px; width: 201px;"> &nbsp;
                             &nbsp; Hooray ! Your profile is complete.
                         </h4>
                         <div class="c100 p100 small complete ">
@@ -71,7 +57,7 @@
                                 <select id="gender" name="gender">
                                     <option value="">Choose an option...</option>
                                     <option value="male">Male</option>
-                                    <option value="female"> Female</option>
+                                    <option value="female" selected="selected">Female</option>
                                     <option value="transgender">Transgender</option>
                                 </select>
                                 <label for="gender" class="active">Gender</label>
@@ -106,7 +92,7 @@
                     <div class="row">
                         <div class="col-xs-12 col-sm-6 col-md-4">
                             <div class="file-field input-field"
-                                    style="margin-top: 32px;">
+                                 style="margin-top: 32px;">
                                 <div class="btn btn-lg primary waves-effect waves-light">
                                     <span><i class="material-icons">insert_photo</i> Photo</span>
                                     <input id="photo" size="20000000" accept=".pdf,.jpg,.doc,.docx,.png,.gif" name="photo" type="file">
@@ -265,18 +251,4 @@
     </div>
 
 </div>
-
-
-
-
-{% endblock %}
-
-{% block javascriptsBottom %}
-<script type="text/javascript">
-
-    onAppReady(function() {
-        $('.preload').remove();
-    });
-</script>
-
 {% endblock %}

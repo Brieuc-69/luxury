@@ -1,14 +1,10 @@
 {% extends 'base.html.twig' %}
 
-{% block meta %}
-    <meta name="base_url" content="http://www.fgtechs.fr/z-pedro/wwwluxuryservices">
-    <meta name="csrf-token" content="9Tnm0YBCxgVTxoqI1HzccsU5NuE9RughZmhpzgXn">
-    <!--  favicon -->
-    <link rel="shortcut icon" href="{{asset("assets/img/ico/fav.png")}}">
-    
-{% endblock %}
+{% block title %}Hello JobsController!{% endblock %}
 
 {% block body %}
+
+
 
 <div class="base">
 
@@ -92,15 +88,5 @@
     </div>
 
 </div>
-
-{% endblock %}
-
-{% block javascriptsBottom %}
-<script type="text/javascript">
-
-    onAppReady(function() {
-        $('.preload').remove();
-    });
-</script>
 
 {% endblock %}

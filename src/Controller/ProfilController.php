@@ -8,11 +8,11 @@ use Symfony\Component\Routing\Attribute\Route;
 
 class ProfilController extends AbstractController
 {
-    #[Route('/profil', name: 'app_profil')]
+    #[Route('/profile', name: 'app_profile')]
     public function index(): Response
     {
         return $this->render('profil/index.html.twig', [
-            'controller_name' => 'ProfilController',
+            
         ]);
     }
 }
